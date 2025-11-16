@@ -17,3 +17,8 @@ The goal of this project is to analyze SSH authentication logs to detect:
 2. Install using: sudo dpkg -i splunk*.deb
 3. Start Splunk: sudo /opt/splunk/bin/splunk start
 4. Login via browser at http://localhost:8000
+
+# Preparation
+1. Log in to your Splunk Enterprise
+2. Go to Apps > Search & Reporting
+3. Click Add Data → Upload
