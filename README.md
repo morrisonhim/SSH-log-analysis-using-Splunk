@@ -43,5 +43,17 @@ Identify all failed login attempts: index=ssh_logs event_type="Failed SSH Login"
 1.Highlight the top 10 source IPs generating failed logins
 2.Create a bar chart visualization for failed login attempts per source IP
 
+# Detect Multiple Failed Authentication Attempts (Brute Force)
+Search for multiple failed attempts in logs: index=ssh_logs event_type="Multiple Failed Authentication Attempts"| stats count by id.orig_h, id.resp_h
+1. Detect repeated failures (e.g., more than 5 attempts).
+2. Configure a Splunk alert: Trigger when any IP attempts more than 5 logins within 10 minutes
+
+# Track Successful Logins
+Search for successful logins: index=ssh_logs event_type="Successful SSH Login"| stats count by id.orig_h, id.resp_h
+1.Compare successful logins against prior failed attempts (to detect compromised accounts)
+2.Create a dashboard panel showing top source IPs for successful logins
+
+
+
 
 
