@@ -56,7 +56,7 @@ Search for successful logins: index=ssh_logs event_type="Successful SSH Login"| 
 # 5. Spot Suspicious Connections Without Authentication
 Search for unauthenticated SSH connections:index=ssh_logs event_type="Connection Without Authentication"| stats count by id.orig_h
 1. Create a timechart visualization to monitor such events over time: index=ssh_logs event_type="Connection Without Authentication"| timechart count by id.orig_h
-Identify repeated unauthenticated attempts — potential indicators of port scanning or SSH probing.
+2. Identify repeated unauthenticated attempts — potential indicators of port scanning or SSH probing.
 
 # Conclusion
 The SSH log analysis using Splunk helped detect suspicious login attempts and revealed multiple brute-force attempts. By leveraging dashboards, and visual analytics, this project demonstrates effective real-world log monitoring and security visibility.
