@@ -22,3 +22,20 @@ The goal of this project is to analyze SSH authentication logs to detect:
 1. Log in to your Splunk Enterprise
 2. Go to Apps > Search & Reporting
 3. Click Add Data → Upload
+4. Select the provided ssh_log.json file and upload it
+5. Choose sourcetype = _json so Splunk automatically extracts fields
+6. Index it under a new index, e.g., ssh_logs
+7. Review and click on start searching
+
+# Step by Step Guide
+# Ingest and Parse logs 
+1. Upload ssh_log.json into Splunk
+2. Ensure the following fields are extracted correctly:
+event_type (Successful SSH Login, Failed SSH Login, Multiple Failed Authentication Attempts, Connection Without Authentication),
+    auth_success (true/false/null),
+    auth_attempts
+    id.orig_h (source IP),
+    id.resp_h (destination host)
+3. Run a validation search: index=ssh_log | stats count by event_type
+
+
