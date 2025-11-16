@@ -38,4 +38,10 @@ event_type (Successful SSH Login, Failed SSH Login, Multiple Failed Authenticati
     id.resp_h (destination host)
 3. Run a validation search: index=ssh_log | stats count by event_type
 
+# Analyze Failed Login Attempts
+Identify all failed login attempts: index=ssh_logs event_type="Failed SSH Login" | stats count by id.orig_h
+1.Highlight the top 10 source IPs generating failed logins
+2.Create a bar chart visualization for failed login attempts per source IP
+
+
 
