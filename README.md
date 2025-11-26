@@ -10,7 +10,7 @@ The goal of this project is to analyze SSH authentication logs to detect:
 # Tools Used
 1. Ubuntu Server
 2. Splunk Enterprise
-3. SSH Service (OpenSSH). Download the SSH log file:https://drive.google.com/drive/folders/1BL-kVlc3yCRcAH8NnDmAyRm_3j_2mNLM?usp=sharing
+3. SSH Service (OpenSSH). [Download the SSH log file](https://drive.google.com/drive/folders/1BL-kVlc3yCRcAH8NnDmAyRm_3j_2mNLM?usp=sharing)
 
 # Splunk Configuration
 1. Download Splunk Enterprise
